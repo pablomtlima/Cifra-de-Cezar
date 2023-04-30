@@ -110,6 +110,7 @@ footer {
     }
 
     footer {
+        margin: auto;
         display: fixed;
         bottom: 0;
     }
