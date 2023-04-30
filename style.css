@@ -108,4 +108,9 @@ footer {
     .result {
         width: auto;
     }
+
+    footer {
+        display: fixed;
+        bottom: 0;
+    }
 }
