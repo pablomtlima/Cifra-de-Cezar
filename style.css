@@ -57,7 +57,9 @@ button {
 }
 
 #key {
+    min-width: 50px;
     width: auto;
+
 }
 
 .result {
@@ -87,6 +89,22 @@ footer {
     margin-top: 200px ;
 }
 
-@media screen {
+@media(max-width: 700px) {
+    img {
+        display: none;
+    }
+
+    main {
+        margin:20px;
+        width: auto;
+    }
+
+    input {
+        width: auto;
+
+    }
     
+    .result {
+        width: auto;
+    }
 }
