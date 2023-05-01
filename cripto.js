@@ -1,3 +1,5 @@
+// créditos ao colega da Descomplica Léo
+
 function criptografy(userInput, keyInputUser) {
   let encryptedData = ''
 
