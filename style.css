@@ -41,6 +41,7 @@ main {
     border-radius: 6px;
     background-color: #83724a;
     width: 80%;
+    max-width: 80rem;
     height: auto;
     padding: 2rem 2rem;
     align-items: center;
@@ -57,7 +58,6 @@ div {
     display: flex;
     margin: auto 2rem;
     gap: 5rem;
-
 }
 
 input , .result{
@@ -70,7 +70,9 @@ input , .result{
     border: none;
     outline: none;
 }
-
+input {
+    height: auto;
+}
 
 button {
     font-family:Arial, Helvetica, sans-serif;
@@ -117,6 +119,7 @@ img {
 }
 
 footer {
+    font-size: 1.6rem;
     font-family: Georgia, 'Times New Roman', Times, serif;;
     font-style: italic;
     text-align: center;

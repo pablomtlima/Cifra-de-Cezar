@@ -7,8 +7,6 @@ const decrypt = document.querySelector('#decrypt')
 const encryptFrame = document.querySelector('.encryptFrame')
 const decryptFrame = document.querySelector('.decryptFrame')
 
-console.log(encrypt.getAttributeNames())
-console.log(decrypt.getAttributeNames())
 
 encrypt.addEventListener('click', ()=>{
     decryptFrame.classList.add('hidden')
