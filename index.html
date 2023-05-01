@@ -10,12 +10,13 @@
     
     
     <h1>Cifra de Cezar</h1>
+    <div class="menu">
+        <button id="decrypt" >Descriptografar</button>
+        <button id="encrypt" autofocus>Criptografar</button>
+    </div>
     
     <main class="encryptFrame">
-        <div class="menu">
-            <button autofocus id="encrypt">Criptografar</button>
-            <button id="decrypt">Descriptografar</button>
-        </div>
+   
         <form>
             <input type="text" placeholder="Insira o texto">
             <div>
@@ -26,6 +27,21 @@
         <div class="result">
         </div>
     </main>
+
+    <main class="decryptFrame hidden">
+        <div class="menu">
+        </div>
+        <form>
+            <input type="text" placeholder="Insira o texto">
+            <div>
+                <input type="number" max="26" min="0" id="key" placeholder="Chave 1-26">
+                <button type="submit" name="submit" id="submit">Descriptografar</button>
+            </div>
+        </form>
+        <div class="result">
+        </div>
+    </main>
+
     <img src="./images/cezar.png" alt="">
     <script src="./cripto.js"></script>
     <script src="./app.js"></script>
