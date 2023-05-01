@@ -25,9 +25,11 @@ main {
 
 form {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "A" 
-    "B C" ;
+}
+
+div {
+    display: flex;
+    margin: auto 20px;
 
 }
 
@@ -57,7 +59,7 @@ button {
 }
 
 #key {
-    min-width: 50px;
+    min-width: 70px;
     width: auto;
 
 }
