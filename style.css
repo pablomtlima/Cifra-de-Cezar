@@ -69,6 +69,7 @@ input , .result{
     border-radius: 8px;
     border: none;
     outline: none;
+    word-break: break-all;
 }
 input {
     height: auto;
