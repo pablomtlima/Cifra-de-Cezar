@@ -7,17 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+    
     <h1>Cifra de Cezar</h1>
-    <main>
+    
+    <main class="encryptFrame">
+        <div class="menu">
+            <button autofocus id="encrypt">Criptografar</button>
+            <button id="decrypt">Descriptografar</button>
+        </div>
         <form>
             <input type="text" placeholder="Insira o texto">
             <div>
                 <input type="number" max="26" min="0" id="key" placeholder="Chave 1-26">
-                <button type="submit">Codificar</button>
+                <button type="submit" name="submit" id="submit">Criptografar</button>
             </div>
         </form>
         <div class="result">
-    
         </div>
     </main>
     <img src="./images/cezar.png" alt="">

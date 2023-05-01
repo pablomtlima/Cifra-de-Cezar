@@ -5,7 +5,19 @@
 
 body {
     background: rgb(242, 220, 186);
-    background: radial-gradient(circle, rgba(242, 220, 186, 0.835171568627451) 0%, rgba(255, 211, 105, 1) 100%);
+    background: radial-gradient(circle, #f2dcbad5 0%, rgb(158, 130, 64) 100%);
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+
+}
+
+#encrypt, #decrypt {
+    min-width: 300px;
+    width: auto;
 }
 
 h1 {
@@ -14,60 +26,73 @@ h1 {
     font-size: 48px;
 }
 
-main {
-    margin: 50px auto;
+.encryptFrame {
+    display: flex;
+    flex-direction: column;
+    margin:  auto;
     border-radius: 6px;
-    background-color: #cba240;
-    width: 500px;
+    background-color: #83724a;
+    width: 800px;
     height: auto;
-    padding: 20px 10px;
+    padding: 20px 20px;
+    align-items: center;
 }
 
 form {
-    display: grid;
+    min-width: 80%;
 }
 
 div {
     display: flex;
     margin: auto 20px;
+    gap: 50px;
 
 }
 
 input , .result{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
-    padding: 10px;
+    padding: 10px ;
     margin: 20px auto;
-    width: 440px;
+    width: 90%;
     border-radius: 8px;
     border: none;
+    outline: none;
 }
 
-input:focus {
-    background-origin: padding-box;
-    border: 0px solid red;
-}
 
 button {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 16px;
-    background-color: #fed26a;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background-color: #f2dcba;
     margin: auto;
     padding: 10px 20px;
     border: none;
     border-radius: 8px;
 }
 
+button:hover {
+    color: white;
+    background-color: #4c4124;
+}
+
+button:focus {
+    color: white;
+    background-color: #4c4124;
+    outline: none;
+}
+
 #key {
-    min-width: 90px;
+    min-width: 100px;
     width: auto;
 
 }
 
 .result {
-    width: 440px;
+    width: 90%;
     min-height: 200px;
     background-color: aliceblue;
+    margin: 10px;
 }
 
 img {
@@ -78,10 +103,6 @@ img {
     bottom: 0px;
     position: absolute;  
     z-index: -1;
-}
-
-button:hover {
-    background-color: #e4b74d;
 }
 
 footer {
@@ -96,7 +117,7 @@ footer {
         display: none;
     }
 
-    main {
+    .encryptFrame {
         margin:20px;
         width: auto;
     }
