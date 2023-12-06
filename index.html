@@ -17,29 +17,28 @@
     
     <main class="encryptFrame">
    
-        <form>
-            <input type="text" placeholder="Insira o texto">
+        <form id="crypt_form">
+            <input type="text" id="crypt_text" placeholder="Insira o texto">
             <div>
-                <input type="number" max="26" min="0" id="key" placeholder="Chave 1-26">
-                <button type="submit" name="submit" id="submit">Criptografar</button>
+                <input type="text"  id="crypt_key" placeholder="Chave">
+            </div>
+            <div class="result" id="crypt_result">
             </div>
         </form>
-        <div class="result">
-        </div>
+
     </main>
 
     <main class="decryptFrame hidden">
         <div class="menu">
         </div>
-        <form>
-            <input type="text" placeholder="Insira o texto">
+        <form id="decrypt_form">
+            <input type="text" id="decrypt_text" placeholder="Insira o texto">
             <div>
-                <input type="number" max="26" min="0" id="key" placeholder="Chave 1-26">
-                <button type="submit" name="submit" id="submit">Descriptografar</button>
+                <input type="text" id="decrypt_key" placeholder="Chave">
+            </div>
+            <div class="result" id="decrypt_result">
             </div>
         </form>
-        <div class="result">
-        </div>
     </main>
 
     <img src="./images/cezar.png" alt="">

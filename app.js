@@ -1,40 +1,42 @@
-const input = document.querySelector('input')
-const submit = document.querySelector('#submit')
-const resultFrame = document.querySelector('.result')
-const keyInput = document.querySelector('#key')
+const CresultFrame = document.getElementById('crypt_result')
+const DresultFrame = document.getElementById('decrypt_result')
+const CryptKey = document.getElementById('crypt_key')
+const DecryptKey = document.getElementById('decrypt_key')
+const CryptText = document.getElementById('crypt_text')
+const DecryptText = document.getElementById('decrypt_text')
 const encrypt = document.querySelector('#encrypt')
 const decrypt = document.querySelector('#decrypt')
 const encryptFrame = document.querySelector('.encryptFrame')
 const decryptFrame = document.querySelector('.decryptFrame')
+const cryptForm = document.getElementById('crypt_form');
+const decryptForm = document.getElementById('decrypt_form');
+
+decrypt.addEventListener('click', () => {
+    encryptFrame.classList.add('hidden');
+    decryptFrame.classList.remove('hidden');
+});
+
+encrypt.addEventListener('click', () => {
+    decryptFrame.classList.add('hidden');
+    encryptFrame.classList.remove('hidden');
+});
 
 
-encrypt.addEventListener('click', ()=>{
-    decryptFrame.classList.add('hidden')
-    encryptFrame.classList.remove('hidden')
-})
 
-decrypt.addEventListener('click', ()=>{
+cryptForm.addEventListener('input', (event) => {
+    const targetElement = event.target;
 
-    encryptFrame.classList.add('hidden')
-    decryptFrame.classList.remove('hidden')
-})
+    if (targetElement === CryptText || targetElement === CryptKey) {
+        CresultFrame.textContent = criptografy(CryptText.value, CryptKey.value);
+    }
+});
 
-let keyInputUser = 0
 
-function insertResult(event) {
-    const userInput = event.target.value
-    
-    submit.addEventListener('click', event => {
-        event.preventDefault();
+decryptForm.addEventListener('input', (event) => {
+    const targetElement = event.target;
 
-        const resultEncryptedData = criptografy(userInput, keyInputUser)
-
-        resultFrame.textContent = resultEncryptedData
-    })
-}
-
-input.addEventListener('input', insertResult)
-
-keyInput.addEventListener('input', event => keyInputUser = Number(event.target.value))
-
+    if (targetElement === DecryptText || targetElement === DecryptKey) {
+        DresultFrame.textContent = decryptografy(DecryptText.value, DecryptKey.value);
+    }
+});
 
